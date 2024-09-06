@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Living_Lab_team2.iml" filepath="$PROJECT_DIR$/.idea/Living_Lab_team2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/livinglab.iml" filepath="$PROJECT_DIR$/.idea/modules/livinglab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/livinglab.main.iml" filepath="$PROJECT_DIR$/.idea/modules/livinglab.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/livinglab.test.iml" filepath="$PROJECT_DIR$/.idea/modules/livinglab.test.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="livinglab" target="17" />
+      <module name="livinglab.main" target="17" />
+      <module name="livinglab.test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
