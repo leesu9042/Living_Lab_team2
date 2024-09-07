@@ -6,9 +6,13 @@ import com.example.livinglab.repository.ScheduleRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @Controller
@@ -31,18 +35,18 @@ public class ScheduleController {
 
         Schedule saved = scheduleRepository.save(schedule);
         log.info(saved.toString());
-        return "";
+        return "/schedules/new";
     }
-    @GetMapping("/schedules/{id}")
-    public String show(@PathVariable Long id) {
-        log.info("id = " + id);
-        //1 id로 데이터조회
-        Schedule scheduleEntity = scheduleRepository.findAll();
+
+
+    @GetMapping("/schedules")
+    public String index(Model model) {
+        //1 데이터조회
+        List<Schedule> scheduleEntityList = scheduleRepository.findAll();
         // 2 모델에 데이터 등록
-
-
+        model.addAttribute("scheduleList", scheduleEntityList);
         // 3 뷰에 반환
-        return "";
+        return "schedules/index";
     }
 
 }
