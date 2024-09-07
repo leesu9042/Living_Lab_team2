@@ -4,8 +4,14 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class Schedule {
     @Id
     @GeneratedValue
@@ -25,28 +31,4 @@ public class Schedule {
     @Column
     private String note;
 
-    public Schedule(Long id, String date, String time, String name, String location, Integer numOfPeople, String department, String note) {
-        this.id = id;
-        this.date = date;
-        this.time = time;
-        this.name = name;
-        this.location = location;
-        this.numOfPeople = numOfPeople;
-        this.department = department;
-        this.note = note;
-    }
-
-    @Override
-    public String toString() {
-        return "Schedule{" +
-                "id=" + id +
-                ", date='" + date + '\'' +
-                ", time='" + time + '\'' +
-                ", name='" + name + '\'' +
-                ", location='" + location + '\'' +
-                ", numOfPeople='" + numOfPeople + '\'' +
-                ", department='" + department + '\'' +
-                ", note='" + note + '\'' +
-                '}';
-    }
 }
